@@ -28,41 +28,41 @@ namespace CMS_ScanningSystem
             lbTimeInOrOut.Visible = false;
             txtScan.Select();
             lbRoomName.Text = DatabaseClass.AssignRoom(lbRoomName);
-            try
-            {
-                if (DatabaseClass.DatabaseSetupCheck() == 0)
-                {
-                    this.Hide();
-                    new DatabaseSetup().ShowDialog();
-                }
-               if (lbRoomName.Text == "")
-                {
-                    this.Hide();
-                    new RoomChange().ShowDialog();
-                }
-                //else if (DatabaseClass.CheckDatabase_Setup() == 0)
-                //{
-                //    this.Hide();
-                //    new DatabaseSetup().ShowDialog();
-                //}
-                else
-                {
-                    try
-                    {
-                        DatabaseClass.SetDatabaseConnection();
-                    }
-                    catch (Exception)
-                    {
-                        this.Hide();
-                        new DatabaseSetup().ShowDialog();
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                this.Hide();
-                new DatabaseSetup().ShowDialog();
-            }
+            //try
+            //{
+            //    if (DatabaseClass.DatabaseSetupCheck() == 0)
+            //    {
+            //        this.Hide();
+            //        new DatabaseSetup().ShowDialog();
+            //    }
+            //   if (lbRoomName.Text == "")
+            //    {
+            //        this.Hide();
+            //        new RoomChange().ShowDialog();
+            //    }
+            //    //else if (DatabaseClass.CheckDatabase_Setup() == 0)
+            //    //{
+            //    //    this.Hide();
+            //    //    new DatabaseSetup().ShowDialog();
+            //    //}
+            //    else
+            //    {
+            //        try
+            //        {
+            //            DatabaseClass.SetDatabaseConnection();
+            //        }
+            //        catch (Exception)
+            //        {
+            //            this.Hide();
+            //            new DatabaseSetup().ShowDialog();
+            //        }
+            //    }
+            //}
+            //catch (Exception)
+            //{
+            //    this.Hide();
+            //    new DatabaseSetup().ShowDialog();
+            //}
 
         }
 

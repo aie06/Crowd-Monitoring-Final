@@ -25,7 +25,7 @@ namespace CMS_ScanningSystem
                 if (!(txtServerName.Text.Equals("") || txtPortNo.Text.Equals("") || txtUserId.Text.Equals("") || txtPassword.Text.Equals("")))
                 {
                     DatabaseClass.DatabaseSetup(txtServerName, txtPortNo, txtUserId, txtPassword);
-                    DatabaseClass.SetDatabaseConnection();
+                  
                     if (DatabaseClass.CheckDatabase_Setup() > 0)
                     {
                         this.Hide();
@@ -34,7 +34,7 @@ namespace CMS_ScanningSystem
                     else
                     {
                         MessageBox.Show("Invalid Connection, Please check your database connection!");
-                        DatabaseClass.ClearDatabaseSetup();
+                       
                     }
                 }
                 else
@@ -43,7 +43,7 @@ namespace CMS_ScanningSystem
             catch (Exception)
             {
                 MessageBox.Show("Invalid Connection, Please check your database connection!");
-                DatabaseClass.ClearDatabaseSetup();
+               
             }
 
         }

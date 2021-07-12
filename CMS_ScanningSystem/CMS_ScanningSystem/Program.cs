@@ -16,7 +16,7 @@ namespace CMS_ScanningSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ScanningSystem());
+            Application.Run(new DatabaseSetup());
         }
     }
 }
